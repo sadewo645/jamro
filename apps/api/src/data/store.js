@@ -230,15 +230,18 @@ export class DataStore {
       current.count += 1;
       grouping.set(key, current);
     }
-    return Array.from(grouping.values()).map((item) => ({
-      periode: item.periode,
-      curahHujanAvg: item.count ? item.curahHujanTotal / item.count : 0,
-      suhuAvg: item.count ? item.suhuTotal / item.count : 0,
-      kelembapanAvg: item.count ? item.kelembapanTotal / item.count : 0,
-      jalanBaik: item.jalanBaik,
-      jalanBuruk: item.jalanBuruk,
-      observasi: item.count,
-    })).sort((a, b) => a.periode.localeCompare(b.periode));
+    return Array.from(grouping.values())
+      .map((item) => ({
+        periode: item.periode,
+        curahHujanTotal: item.curahHujanTotal,
+        curahHujanAvg: item.count ? item.curahHujanTotal / item.count : 0,
+        suhuAvg: item.count ? item.suhuTotal / item.count : 0,
+        kelembapanAvg: item.count ? item.kelembapanTotal / item.count : 0,
+        jalanBaik: item.jalanBaik,
+        jalanBuruk: item.jalanBuruk,
+        observasi: item.count,
+      }))
+      .sort((a, b) => a.periode.localeCompare(b.periode));
   }
 
   aggregatePabrik({ periode = 'day', pabrikId }) {
