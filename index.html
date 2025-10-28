@@ -1,31 +1,406 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="icon" href="img/flowers.png" type="image/x-icon">
-    <title>Flowers</title>
+    <title>PasarSayur Nusantara</title>
+    <meta name="description" content="PasarSayur Nusantara adalah pasar daring jual beli sayuran segar langsung dari petani lokal.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script defer src="main.js"></script>
 </head>
 <body>
-    <div class="greetings">
-    <!-- silahkan menambah kata sesuai keinginan dengan <span>text...</span -->
-        <span>I</span>
-        <span>L</span>
-        <span>O</span>
-        <span>V</span>
-        <span>E</span>
-        <span>Y</span>
-    </div>
-    <div class="description">
-        <span>Aku harap kamu bisa bangga ya punya aku</span>
-    </div>
-    <div class="button">
-        <button>
-            <a href="page2.html">lanjut</a>
-        </button>
-        
-    </div>
+    <header class="site-header" id="beranda">
+        <div class="container header__inner">
+            <a href="#beranda" class="brand" aria-label="PasarSayur Nusantara">PasarSayur<span>Nusantara</span></a>
+            <button class="menu-toggle" type="button" aria-controls="primary-navigation" aria-expanded="false" data-menu-toggle>
+                <span class="menu-toggle__line" aria-hidden="true"></span>
+                <span class="menu-toggle__line" aria-hidden="true"></span>
+                <span class="menu-toggle__line" aria-hidden="true"></span>
+                <span class="menu-toggle__label">Menu</span>
+            </button>
+            <nav class="site-nav" id="primary-navigation" aria-label="Navigasi utama">
+                <ul>
+                    <li><a href="#produk">Produk</a></li>
+                    <li><a href="#keunggulan">Keunggulan</a></li>
+                    <li><a href="#langkah">Cara Pesan</a></li>
+                    <li><a href="#testimoni">Testimoni</a></li>
+                    <li><a href="#kontak">Kontak</a></li>
+                </ul>
+            </nav>
+            <a class="cta-button" href="#produk">Belanja Sekarang</a>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero" aria-labelledby="hero-title">
+            <div class="container hero__inner">
+                <div class="hero__content">
+                    <p class="hero__eyebrow">Sayuran segar antar 6 jam setelah panen</p>
+                    <h1 id="hero-title">Pasar daring sayuran lokal, sehat untuk keluarga dan mendukung petani</h1>
+                    <p class="hero__description">Pesan beragam sayuran organik dan hidroponik dari 18 mitra tani pilihan. Kami pastikan kualitas terbaik dengan proses pendinginan sejak kebun hingga rumah Anda.</p>
+                    <div class="hero__actions">
+                        <a class="cta-button" href="#produk">Mulai Belanja</a>
+                        <a class="secondary-button" href="#keunggulan">Mengapa PasarSayur?</a>
+                    </div>
+                    <dl class="hero-stats" aria-label="Statistik PasarSayur">
+                        <div class="hero-stats__item">
+                            <dt>Produk aktif</dt>
+                            <dd><span data-stat="products">0</span> jenis</dd>
+                        </div>
+                        <div class="hero-stats__item">
+                            <dt>Mitra petani</dt>
+                            <dd><span data-stat="farmers">0</span> kebun</dd>
+                        </div>
+                        <div class="hero-stats__item">
+                            <dt>Pelanggan puas</dt>
+                            <dd>98% memberikan <span aria-hidden="true">★★★★★</span><span class="sr-only">lima bintang</span></dd>
+                        </div>
+                    </dl>
+                </div>
+                <div class="hero__visual" aria-hidden="true">
+                    <div class="hero__badge">Panen Pagi</div>
+                    <img src="https://images.unsplash.com/photo-1542831371-29b0f74f9713?auto=format&fit=crop&w=900&q=80" alt="Ilustrasi sayuran segar" loading="lazy">
+                    <div class="hero__note">Rantai dingin 4°C menjaga kesegaran hingga diterima.</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="keunggulan" aria-labelledby="advantages-title">
+            <div class="container">
+                <div class="section-heading">
+                    <h2 id="advantages-title">Keunggulan belanja di PasarSayur</h2>
+                    <p>Kami merancang pengalaman belanja sayuran yang lebih mudah, transparan, dan ramah lingkungan.</p>
+                </div>
+                <div class="features-grid">
+                    <article class="feature-card">
+                        <div class="feature-card__icon" aria-hidden="true">🥬</div>
+                        <h3>Panen sesuai pesanan</h3>
+                        <p>Sayuran dipanen setelah pesanan diterima sehingga Anda mendapatkan kualitas terbaik dengan kandungan gizi maksimal.</p>
+                    </article>
+                    <article class="feature-card">
+                        <div class="feature-card__icon" aria-hidden="true">🌱</div>
+                        <h3>Pilihan organik &amp; hidroponik</h3>
+                        <p>Kurasi dari petani bersertifikat organik dan hidroponik dengan penggunaan pestisida yang sangat minim.</p>
+                    </article>
+                    <article class="feature-card">
+                        <div class="feature-card__icon" aria-hidden="true">🚚</div>
+                        <h3>Pengiriman cepat terjadwal</h3>
+                        <p>Armada berpendingin siap mengantar ke wilayah Jabodetabek dan Bandung dengan jadwal pengiriman fleksibel.</p>
+                    </article>
+                    <article class="feature-card">
+                        <div class="feature-card__icon" aria-hidden="true">📦</div>
+                        <h3>Kemasan ramah lingkungan</h3>
+                        <p>Kami menggunakan kemasan kertas daur ulang dan kantong biodegradable untuk mengurangi limbah plastik.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section section--products" id="produk" aria-labelledby="products-title">
+            <div class="container">
+                <div class="section-heading">
+                    <h2 id="products-title">Produk sayuran favorit</h2>
+                    <p>Gunakan pencarian, filter kategori, dan urutan harga untuk menemukan sayuran terbaik sesuai kebutuhan rumah tangga atau bisnis kuliner Anda.</p>
+                </div>
+                <div class="product-controls" role="region" aria-label="Filter produk">
+                    <label class="field field--search">
+                        <span class="field__label">Cari sayuran</span>
+                        <input type="search" name="search" placeholder="Contoh: bayam, wortel, organik" autocomplete="off" data-search>
+                    </label>
+                    <div class="filter-chips" role="list">
+                        <span class="filter-chips__label">Kategori:</span>
+                        <button type="button" class="chip is-active" data-filter="all">Semua</button>
+                        <button type="button" class="chip" data-filter="daun">Sayur Daun</button>
+                        <button type="button" class="chip" data-filter="buah">Sayur Buah</button>
+                        <button type="button" class="chip" data-filter="akar">Umbi &amp; Akar</button>
+                        <button type="button" class="chip" data-filter="rempah">Rempah &amp; Bumbu</button>
+                    </div>
+                    <label class="field field--select">
+                        <span class="field__label">Urutkan</span>
+                        <select data-sort aria-label="Urutkan produk">
+                            <option value="default">Pilihan terbaik</option>
+                            <option value="price-asc">Harga terendah</option>
+                            <option value="price-desc">Harga tertinggi</option>
+                        </select>
+                    </label>
+                </div>
+                <div class="product-grid" data-product-grid>
+                    <article class="product-card" data-product data-name="Bayam Organik" data-category="daun" data-price="14500" data-keywords="bayam organik hijau daun sup" data-farm="Kebun Harmoni, Bogor">
+                        <div class="product-card__tag">Sayur Daun</div>
+                        <img src="https://images.unsplash.com/photo-1524592094714-0f0654e20314?auto=format&fit=crop&w=800&q=80" alt="Bayam organik segar" loading="lazy">
+                        <h3>Bayam Organik</h3>
+                        <p class="product-card__description">Panen pagi dari kebun organik, cocok untuk sup bening dan smoothies.</p>
+                        <dl class="product-card__details">
+                            <div>
+                                <dt>Harga</dt>
+                                <dd>Rp 14.500 / 250 g</dd>
+                            </div>
+                            <div>
+                                <dt>Asal</dt>
+                                <dd>Kebun Harmoni, Bogor</dd>
+                            </div>
+                        </dl>
+                        <button type="button" class="product-card__cta">Tambah ke keranjang</button>
+                    </article>
+
+                    <article class="product-card" data-product data-name="Pak Choi Hidroponik" data-category="daun" data-price="18000" data-keywords="pakcoy pak choy tumis crunchy hidroponik" data-farm="FreshGrow Hydroponic, Depok">
+                        <div class="product-card__tag">Sayur Daun</div>
+                        <img src="https://images.unsplash.com/photo-1518977676601-b53f82aba655?auto=format&fit=crop&w=800&q=80" alt="Pak choi hidroponik" loading="lazy">
+                        <h3>Pak Choi Hidroponik</h3>
+                        <p class="product-card__description">Daun renyah dengan rasa gurih ringan, sangat cocok untuk ditumis cepat.</p>
+                        <dl class="product-card__details">
+                            <div>
+                                <dt>Harga</dt>
+                                <dd>Rp 18.000 / 300 g</dd>
+                            </div>
+                            <div>
+                                <dt>Asal</dt>
+                                <dd>FreshGrow Hydroponic, Depok</dd>
+                            </div>
+                        </dl>
+                        <button type="button" class="product-card__cta">Tambah ke keranjang</button>
+                    </article>
+
+                    <article class="product-card" data-product data-name="Tomat Cherry Merah" data-category="buah" data-price="22000" data-keywords="tomat cherry merah salad buah sayur" data-farm="Ladang Sejahtera, Bandung">
+                        <div class="product-card__tag">Sayur Buah</div>
+                        <img src="https://images.unsplash.com/photo-1437750769465-301382cdf094?auto=format&fit=crop&w=800&q=80" alt="Tomat cherry merah" loading="lazy">
+                        <h3>Tomat Cherry Merah</h3>
+                        <p class="product-card__description">Tomat cherry manis renyah, sempurna untuk salad dan garnish.</p>
+                        <dl class="product-card__details">
+                            <div>
+                                <dt>Harga</dt>
+                                <dd>Rp 22.000 / 250 g</dd>
+                            </div>
+                            <div>
+                                <dt>Asal</dt>
+                                <dd>Ladang Sejahtera, Bandung</dd>
+                            </div>
+                        </dl>
+                        <button type="button" class="product-card__cta">Tambah ke keranjang</button>
+                    </article>
+
+                    <article class="product-card" data-product data-name="Wortel Organik" data-category="akar" data-price="16000" data-keywords="wortel organik beta karoten sop tumis" data-farm="Tani Sehat, Lembang">
+                        <div class="product-card__tag">Umbi &amp; Akar</div>
+                        <img src="https://images.unsplash.com/photo-1506807803488-8eafc15323c0?auto=format&fit=crop&w=800&q=80" alt="Wortel organik" loading="lazy">
+                        <h3>Wortel Organik</h3>
+                        <p class="product-card__description">Manis alami dengan kandungan beta karoten tinggi, cocok untuk jus.</p>
+                        <dl class="product-card__details">
+                            <div>
+                                <dt>Harga</dt>
+                                <dd>Rp 16.000 / 500 g</dd>
+                            </div>
+                            <div>
+                                <dt>Asal</dt>
+                                <dd>Tani Sehat, Lembang</dd>
+                            </div>
+                        </dl>
+                        <button type="button" class="product-card__cta">Tambah ke keranjang</button>
+                    </article>
+
+                    <article class="product-card" data-product data-name="Brokoli Premium" data-category="buah" data-price="26000" data-keywords="brokoli premium florets kukus tumis" data-farm="Kebun Hijau, Cianjur">
+                        <div class="product-card__tag">Sayur Buah</div>
+                        <img src="https://images.unsplash.com/photo-1582515073490-dc84f5ed41b8?auto=format&fit=crop&w=800&q=80" alt="Brokoli segar" loading="lazy">
+                        <h3>Brokoli Premium</h3>
+                        <p class="product-card__description">Floret rapat dengan warna hijau tua, kaya vitamin C dan serat.</p>
+                        <dl class="product-card__details">
+                            <div>
+                                <dt>Harga</dt>
+                                <dd>Rp 26.000 / 350 g</dd>
+                            </div>
+                            <div>
+                                <dt>Asal</dt>
+                                <dd>Kebun Hijau, Cianjur</dd>
+                            </div>
+                        </dl>
+                        <button type="button" class="product-card__cta">Tambah ke keranjang</button>
+                    </article>
+
+                    <article class="product-card" data-product data-name="Kentang Granola" data-category="akar" data-price="19000" data-keywords="kentang granola bakar goreng umbi" data-farm="Tani Muda, Pangalengan">
+                        <div class="product-card__tag">Umbi &amp; Akar</div>
+                        <img src="https://images.unsplash.com/photo-1582511081216-9864e9f16902?auto=format&fit=crop&w=800&q=80" alt="Kentang granola" loading="lazy">
+                        <h3>Kentang Granola</h3>
+                        <p class="product-card__description">Tekstur padat cocok untuk kentang goreng, mashed potato, dan perkedel.</p>
+                        <dl class="product-card__details">
+                            <div>
+                                <dt>Harga</dt>
+                                <dd>Rp 19.000 / 1 kg</dd>
+                            </div>
+                            <div>
+                                <dt>Asal</dt>
+                                <dd>Tani Muda, Pangalengan</dd>
+                            </div>
+                        </dl>
+                        <button type="button" class="product-card__cta">Tambah ke keranjang</button>
+                    </article>
+
+                    <article class="product-card" data-product data-name="Cabai Merah Besar" data-category="rempah" data-price="32000" data-keywords="cabai merah besar sambal pedas" data-farm="Petani Bina Tani, Garut">
+                        <div class="product-card__tag">Rempah &amp; Bumbu</div>
+                        <img src="https://images.unsplash.com/photo-1613478881180-65d6da2b36f1?auto=format&fit=crop&w=800&q=80" alt="Cabai merah besar" loading="lazy">
+                        <h3>Cabai Merah Besar</h3>
+                        <p class="product-card__description">Rasa pedas seimbang, favorit untuk bumbu balado dan sambal.</p>
+                        <dl class="product-card__details">
+                            <div>
+                                <dt>Harga</dt>
+                                <dd>Rp 32.000 / 500 g</dd>
+                            </div>
+                            <div>
+                                <dt>Asal</dt>
+                                <dd>Petani Bina Tani, Garut</dd>
+                            </div>
+                        </dl>
+                        <button type="button" class="product-card__cta">Tambah ke keranjang</button>
+                    </article>
+
+                    <article class="product-card" data-product data-name="Seledri Crisp" data-category="rempah" data-price="9000" data-keywords="seledri crisp garnish sop" data-farm="UrbanFarm, Jakarta">
+                        <div class="product-card__tag">Rempah &amp; Bumbu</div>
+                        <img src="https://images.unsplash.com/photo-1506806732259-39c2d0268443?auto=format&fit=crop&w=800&q=80" alt="Seledri segar" loading="lazy">
+                        <h3>Seledri Crisp</h3>
+                        <p class="product-card__description">Aroma wangi dan batang renyah, cocok untuk sup dan tumisan.</p>
+                        <dl class="product-card__details">
+                            <div>
+                                <dt>Harga</dt>
+                                <dd>Rp 9.000 / 100 g</dd>
+                            </div>
+                            <div>
+                                <dt>Asal</dt>
+                                <dd>UrbanFarm, Jakarta</dd>
+                            </div>
+                        </dl>
+                        <button type="button" class="product-card__cta">Tambah ke keranjang</button>
+                    </article>
+
+                    <article class="product-card" data-product data-name="Kacang Panjang Organik" data-category="buah" data-price="15000" data-keywords="kacang panjang organik sayur tumis" data-farm="Tunas Hijau, Subang">
+                        <div class="product-card__tag">Sayur Buah</div>
+                        <img src="https://images.unsplash.com/photo-1568600891621-2f6e4ab81dbb?auto=format&fit=crop&w=800&q=80" alt="Kacang panjang organik" loading="lazy">
+                        <h3>Kacang Panjang Organik</h3>
+                        <p class="product-card__description">Panen harian dengan rasa gurih segar, ideal untuk oseng dan urap.</p>
+                        <dl class="product-card__details">
+                            <div>
+                                <dt>Harga</dt>
+                                <dd>Rp 15.000 / 350 g</dd>
+                            </div>
+                            <div>
+                                <dt>Asal</dt>
+                                <dd>Tunas Hijau, Subang</dd>
+                            </div>
+                        </dl>
+                        <button type="button" class="product-card__cta">Tambah ke keranjang</button>
+                    </article>
+                </div>
+                <p class="product-empty" data-empty-state hidden>Tidak ditemukan produk sesuai pencarian Anda. Coba ubah kata kunci atau kategori.</p>
+            </div>
+        </section>
+
+        <section class="section section--highlight" aria-labelledby="highlight-title">
+            <div class="container highlight__inner">
+                <div>
+                    <h2 id="highlight-title">Solusi untuk dapur rumah dan bisnis kuliner</h2>
+                    <p>Selain pesanan mingguan untuk keluarga, PasarSayur menyediakan paket langganan untuk kafe, katering, dan restoran. Tentukan daftar kebutuhan, kami bantu siapkan stok segar sesuai jadwal produksi Anda.</p>
+                </div>
+                <ul class="highlight-list">
+                    <li>⏱️ Jadwal pengiriman fleksibel &amp; konsisten</li>
+                    <li>📋 Laporan kualitas dan ketertelusuran lengkap</li>
+                    <li>🤝 Konsultasi menu bersama ahli gizi &amp; chef partner</li>
+                    <li>💳 Dukungan pembayaran tempo untuk mitra bisnis</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="section section--steps" id="langkah" aria-labelledby="steps-title">
+            <div class="container">
+                <div class="section-heading">
+                    <h2 id="steps-title">3 langkah mudah mendapatkan sayuran terbaik</h2>
+                </div>
+                <ol class="steps-list">
+                    <li>
+                        <h3>Pilih produk</h3>
+                        <p>Telusuri katalog lengkap, gunakan filter sesuai kebutuhan dan masukkan ke keranjang.</p>
+                    </li>
+                    <li>
+                        <h3>Tentukan jadwal</h3>
+                        <p>Pilih jadwal pengiriman yang tersedia, kami akan menyesuaikan waktu panen dari petani.</p>
+                    </li>
+                    <li>
+                        <h3>Terima dalam kondisi segar</h3>
+                        <p>Sayuran dikirim dengan kendaraan berpendingin dan tiba di rumah Anda dalam keadaan prima.</p>
+                    </li>
+                </ol>
+            </div>
+        </section>
+
+        <section class="section section--testimonials" id="testimoni" aria-labelledby="testimonials-title">
+            <div class="container">
+                <div class="section-heading">
+                    <h2 id="testimonials-title">Apa kata pelanggan</h2>
+                </div>
+                <div class="testimonials-grid">
+                    <figure class="testimonial-card">
+                        <blockquote>"Belanja sayur jadi jauh lebih mudah. Kualitasnya konsisten dan selalu segar. Anak-anak suka dengan tomat cherry-nya!"</blockquote>
+                        <figcaption>
+                            <span class="testimonial-card__name">Rina, Ibu Rumah Tangga</span>
+                            <span class="testimonial-card__location">Jakarta Selatan</span>
+                        </figcaption>
+                    </figure>
+                    <figure class="testimonial-card">
+                        <blockquote>"Kami menggunakan layanan langganan untuk kafe. Pengiriman tepat waktu dan timnya responsif terhadap kebutuhan menu kami."</blockquote>
+                        <figcaption>
+                            <span class="testimonial-card__name">Chef Bima</span>
+                            <span class="testimonial-card__location">Bandung</span>
+                        </figcaption>
+                    </figure>
+                    <figure class="testimonial-card">
+                        <blockquote>"Transparansi informasi petani membuat saya percaya. Rasanya seperti ikut mendukung pertanian lokal."</blockquote>
+                        <figcaption>
+                            <span class="testimonial-card__name">Sarah</span>
+                            <span class="testimonial-card__location">Depok</span>
+                        </figcaption>
+                    </figure>
+                </div>
+            </div>
+        </section>
+
+        <section class="section section--newsletter" aria-labelledby="newsletter-title">
+            <div class="container newsletter__inner">
+                <div>
+                    <h2 id="newsletter-title">Dapatkan resep sehat &amp; promo panen</h2>
+                    <p>Daftarkan email Anda untuk menerima resep mingguan, tips penyimpanan sayur, dan penawaran spesial mitra petani kami.</p>
+                </div>
+                <form class="newsletter-form" action="#" method="post">
+                    <label class="sr-only" for="newsletter-email">Alamat email</label>
+                    <input id="newsletter-email" type="email" name="email" placeholder="nama@email.com" required>
+                    <button type="submit">Daftar</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer" id="kontak">
+        <div class="container footer__inner">
+            <div>
+                <a href="#beranda" class="brand brand--footer">PasarSayur<span>Nusantara</span></a>
+                <p class="footer__description">Platform jual beli sayuran segar langsung dari petani lokal dengan proses pengiriman cepat dan terjaga.</p>
+            </div>
+            <div class="footer__links">
+                <h3>Informasi</h3>
+                <ul>
+                    <li><a href="#produk">Katalog produk</a></li>
+                    <li><a href="#langkah">Cara berlangganan</a></li>
+                    <li><a href="#testimoni">Cerita pelanggan</a></li>
+                </ul>
+            </div>
+            <div class="footer__contact">
+                <h3>Hubungi kami</h3>
+                <p>WhatsApp: <a href="https://wa.me/6281234567890">+62 812-3456-7890</a></p>
+                <p>Email: <a href="mailto:halo@pasarsayur.id">halo@pasarsayur.id</a></p>
+                <p>Alamat gudang dingin: Jl. Sawo No. 12, Depok</p>
+            </div>
+        </div>
+        <div class="footer__bottom">
+            <small>&copy; <span id="copyright-year"></span> PasarSayur Nusantara. Semua hak cipta.</small>
+        </div>
+    </footer>
 </body>
 </html>
