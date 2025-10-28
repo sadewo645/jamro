@@ -1,0 +1,25 @@
+{
+  "name": "jamro",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Palm oil estate and mill monitoring platform",
+  "packageManager": "npm@10.7.0",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev:web": "npm --workspace apps/web run dev",
+    "dev:api": "npm --workspace apps/api run start:dev",
+    "lint": "npm run lint --workspaces",
+    "build": "npm run build --workspaces",
+    "test": "npm run test --workspaces"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://example.com/palm-oil-monitoring"
+  }
+}
