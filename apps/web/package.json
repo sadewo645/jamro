@@ -1,0 +1,13 @@
+{
+  "name": "web",
+  "version": "0.1.0",
+  "type": "module",
+  "private": true,
+  "description": "Jamro monitoring dashboard",
+  "scripts": {
+    "dev": "node server.js",
+    "lint": "node --check public/assets/main.js",
+    "build": "echo 'Static build already in public directory'",
+    "test": "echo 'No tests for web dashboard'"
+  }
+}
