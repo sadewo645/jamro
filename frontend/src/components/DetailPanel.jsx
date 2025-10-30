@@ -10,6 +10,7 @@ import {
   YAxis
 } from "recharts";
 import { statusToClassName } from "../utils/alerts.js";
+import { formatSensorValue } from "../utils/format.js";
 
 /**
  * Component: DetailPanel
@@ -34,7 +35,7 @@ export default function DetailPanel({ station, history, recommendations }) {
           {station.sensors.map((sensor) => (
             <div key={sensor.id} className={`metric-row ${statusToClassName(sensor.status)}`}>
               <span>{sensor.label}</span>
-              <span>{sensor.value ?? 0}</span>
+              <span>{formatSensorValue(sensor.value)}</span>
             </div>
           ))}
         </div>

@@ -1,5 +1,6 @@
 import PropTypes from "prop-types";
 import { statusToClassName } from "../utils/alerts.js";
+import { formatSensorValue } from "../utils/format.js";
 
 /**
  * Component: StationCard
@@ -16,12 +17,12 @@ export default function StationCard({ station, onSelect }) {
         </span>
       </div>
       <div className="metrics-list">
-        {station.sensors.map((sensor) => (
-          <div key={sensor.id} className="metric-row">
-            <span>{sensor.label}</span>
-            <span>{sensor.value ?? 0}</span>
-          </div>
-        ))}
+          {station.sensors.map((sensor) => (
+            <div key={sensor.id} className="metric-row">
+              <span>{sensor.label}</span>
+              <span>{formatSensorValue(sensor.value)}</span>
+            </div>
+          ))}
       </div>
       <button type="button" className="detail-button" onClick={onSelect}>
         Lihat Detail

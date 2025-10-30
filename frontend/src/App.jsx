@@ -2,6 +2,7 @@ import { useEffect, useMemo, useRef, useState } from "react";
 import DashboardHeader from "./components/DashboardHeader.jsx";
 import StationCard from "./components/StationCard.jsx";
 import DetailPanel from "./components/DetailPanel.jsx";
+import OverviewTrends from "./components/OverviewTrends.jsx";
 import { useWebSocketData } from "./hooks/useWebSocketData.js";
 import { defaultPayload, stationDefinitions } from "./config/stations.js";
 import { getAlertMessage, getSensorStatus, mapRecommendations } from "./utils/alerts.js";
@@ -112,6 +113,7 @@ export default function App() {
       </aside>
       <main className="main-content">
         <DashboardHeader timestamp={timestamp} data={mergedData} />
+        <OverviewTrends history={history} />
         <section className="status-grid">
           {stationStatuses.map((station) => (
             <StationCard key={station.key} station={station} onSelect={() => setActiveStation(station)} />
